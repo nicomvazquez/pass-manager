@@ -1,0 +1,9 @@
+# server
+
+node_modules
+
+
+#front
+
+client/node_modules
+client/dist
