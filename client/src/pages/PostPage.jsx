@@ -11,11 +11,11 @@ function PostPage() {
     getPosts();
   }, []);
 
-  if (posts.length === 0) return <h1>no post again</h1>;
-
   return (
     <div>
-      <div>
+      <h1 className="text-4xl my-10 text-center">{posts.length === 0 ? "no passwords again" : "your passwords"}</h1>
+
+      <div className="flex flex-wrap gap-7 justify-evenly">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}

@@ -21,7 +21,7 @@ function RegisterPage() {
   }, [isAutenticated]);
 
   return (
-    <div className="bg-slate-600 max-w-md p-10 rounded-md">
+    <div className="bg-slate-600 max-w-md p-10 rounded-md m-auto">
       {registerErrors.map((message, i) => (
         <div className="bg-red-500 p-2" key={i}>
           {message.error}
@@ -34,7 +34,9 @@ function RegisterPage() {
           singup(values);
         })}
       >
-        <label htmlFor="">email</label>
+        <label htmlFor="" className="text-2xl">
+          email
+        </label>
         <input
           type="email"
           {...register("email", {
@@ -47,14 +49,16 @@ function RegisterPage() {
         />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
-        <label htmlFor="">username</label>
+        <label htmlFor="" className="text-2xl">
+          username
+        </label>
         <input
           type="text"
           {...register("username", {
             required: {
               value: true,
               message: "this camp is required",
-            }
+            },
           })}
           className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
         />
@@ -62,14 +66,16 @@ function RegisterPage() {
           <p className="text-red-500">{errors.username.message}</p>
         )}
 
-        <label htmlFor="">password</label>
+        <label htmlFor="" className="text-2xl">
+          password
+        </label>
         <input
           type="password"
           {...register("password", {
             required: {
               value: true,
               message: "this camp is required",
-            }
+            },
           })}
           className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
         />
@@ -77,7 +83,9 @@ function RegisterPage() {
           <p className="text-red-500">{errors.password.message}</p>
         )}
 
-        <label htmlFor="">confirm password</label>
+        <label htmlFor="" className="text-2xl">
+          confirm password
+        </label>
         <input
           type="password"
           {...register("comfirm", {
@@ -99,9 +107,14 @@ function RegisterPage() {
           <p className="text-red-500">{errors.comfirm.message}</p>
         )}
 
-        <button type="submit">submit</button>
-        <p>
-          ya tenes cuenta? <Link to={"/"}>login</Link>
+        <button type="submit" className="bg-green-700 px-3 py-2 rounded-md">
+          submit
+        </button>
+        <p className="mt-7">
+          ya tenes cuenta?{" "}
+          <Link to={"/login"} className="text-emerald-600">
+            login
+          </Link>
         </p>
       </form>
     </div>

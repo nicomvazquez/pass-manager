@@ -8,24 +8,24 @@ function Navbar() {
   const { isAutenticated, user, logout } = useAuth();
 
   return (
-    <nav className="bg-slate-400 flex justify-between py-5 px-10 my-3 rounded-md">
+    <nav className="bg-slate-400 flex justify-between items-center py-5 px-10 my-3 rounded-md">
       <Link to={"/"}>
-        <h1>passwoed manager</h1>
+        <h1 className="text-2xl">password manager</h1>
       </Link>
-      <ul className="flex gap-x-3">
+      <ul className="flex gap-x-3 items-center">
         {isAutenticated ? (
           <>
-            <li>welcome {user.username}</li>
+            <li className="mx-5">welcome {user.username}</li>
             <li>
               <Link to={"/posts"}>posts</Link>
             </li>
-            <li>
+            <li className="bg-green-700 p-3 rounded-md">
               <Link to={"/posts/new"}>add post</Link>
             </li>
             <li>
               <Link to={"/generator"}>generate password</Link>
             </li>
-            <li>
+            <li className="bg-red-500 p-3 rounded-md">
               <Link
                 onClick={() => {
                   logout();
@@ -38,7 +38,7 @@ function Navbar() {
           </>
         ) : (
           <>
-            <li>
+            <li className="bg-teal-500 px-3 py-2 rounded-md">
               <Link to={"/login"}>login</Link>
             </li>
             <li>

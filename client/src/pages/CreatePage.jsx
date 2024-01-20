@@ -28,8 +28,8 @@ const PasswordGenerator = () => {
 
   return (
     <div>
-      <div className="bg-gray-700 max-w-md p-5 rounded-md">
-        <h1 className="">Password Generator</h1>
+      <div className="bg-gray-700 max-w-md p-5 rounded-md m-auto">
+        <h1 className="text-3xl mb-5">Password Generator</h1>
         <label htmlFor="length">Password Length:</label>
         <input
           className="mx-3 rounded-md bg-gray-900"
@@ -73,7 +73,7 @@ const PasswordGenerator = () => {
         <br />
         <label>
           <input
-            className="mx-3"
+            className="mx-3 mb-5"
             type="checkbox"
             checked={includeSpecialChars}
             onChange={() => setIncludeSpecialChars(!includeSpecialChars)}
@@ -81,9 +81,9 @@ const PasswordGenerator = () => {
           Include Special Characters
         </label>
         <br />
-        <button onClick={generatePassword}>Generate Password</button>
+        <button className="bg-green-700 px-3 py-2 rounded-md" onClick={generatePassword}>Generate Password</button>
         <br />
-        <h3>Password: {password}</h3>
+        <h3 className="mt-5">Password: {password}</h3>
       </div>
     </div>
   );
