@@ -1,6 +1,6 @@
 export const TOKEN_SECRET = "secret123"
 
-export const PORT = process.env.PORT || 3000
+export const PORT = process.env.PORT || 4500
 
 export const DB_HOST = process.env.DB_HOST || "localhost"
 

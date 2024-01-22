@@ -7,7 +7,7 @@ export const register = async (req, res) => {
   const { email, username, password } = req.body;
 
   try {
-    const [isExist] = await pool.query("SELECT * FROM user WHERE email = ?", [
+    const [isExist] = await pool.query("SELECT * FROM users WHERE email = ?", [
       email,
     ]);
     if (isExist.length > 0) {
@@ -45,7 +45,7 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const [userFound] = await pool.query("SELECT * FROM user WHERE email = ?", [
+    const [userFound] = await pool.query("SELECT * FROM users WHERE email = ?", [
       email,
     ]);
     if (userFound.length === 0) {
@@ -78,7 +78,7 @@ export const logout = (req, res) => {
 };
 
 export const profile = async (req, res) => {
-  const [result] = await pool.query("SELECT * FROM user WHERE id = ?", [
+  const [result] = await pool.query("SELECT * FROM users WHERE id = ?", [
     req.user.id,
   ]);
 
@@ -97,7 +97,7 @@ export const verifyToken = async (req, res) => {
     if (error) return res.sendStatus(401);
     console.log(user)
 
-    const [userFound] = await pool.query("SELECT * FROM user WHERE id = ?", [user.id]);
+    const [userFound] = await pool.query("SELECT * FROM users WHERE id = ?", [user.id]);
     if (!userFound) return res.sendStatus(401);
     console.log(userFound)
 
