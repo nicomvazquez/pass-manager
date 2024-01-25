@@ -1,16 +1,16 @@
 CREATE DATABASE passmanager;
-USE passmanager;
+\c passmanager; -- Cambiar a la base de datos recién creada
 
-CREATE TABLE user(
-    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
     username VARCHAR(255),
     email VARCHAR(255),
-    password VARCHAR(255)  
+    password VARCHAR(255)
 );
 
-CREATE TABLE post(
-    id INT(11) PRIMARY KEY AUTO_INCREMENT,
-    id_user INT(11),
+CREATE TABLE post (
+    id SERIAL PRIMARY KEY,
+    id_user INT,
     title VARCHAR(255),
     password VARCHAR(255),
     url VARCHAR(255)

@@ -42,7 +42,7 @@ function PostFormPage() {
           navigate("/posts");
         })}
       >
-        <label htmlFor="">title</label>
+        <label htmlFor="">web site</label>
         <input
           type="text"
           className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
