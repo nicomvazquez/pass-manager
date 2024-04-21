@@ -18,21 +18,16 @@ function HomePage() {
       </div>
       <div className="flex flex-col gap-5">
         <div className="max-w-xl bg-slate-200 p-8 rounded-md">
-          <p className="mb-10">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
-            tenetur sequi amet tempore
-          </p>
+          <p className="mb-10">Registrate y vive la experiencia</p>
           <Link to={"/posts"} className="border-2 border-cyan-500 p-4">
             get started
           </Link>
         </div>
         <div className="max-w-xl bg-slate-200 p-8 rounded-md">
-          <img src="foto-home.png" alt="" />
+          <img src="foto-card.png" alt="" />
           <p className="mt-10">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
-            tenetur sequi amet tempore illo totam perferendis. Ad sapiente harum
-            veritatis similique dolores nisi cumque at saepe. Ullam dolor
-            possimus culpa.
+            con un diseño agradable y facil de usar, no se costana nada
+            acostumbrarse a nuestro software
           </p>
         </div>
       </div>

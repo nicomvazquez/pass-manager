@@ -31,7 +31,7 @@ function PostFormPage() {
   }, []);
 
   return (
-    <div className="h-full">
+    <div className="h-full w-full">
       <form
         onSubmit={handleSubmit(async (values) => {
           if (params.id) {
@@ -41,7 +41,7 @@ function PostFormPage() {
           }
           navigate("/posts");
         })}
-        className="bg-slate-200 max-w-md p-10 rounded-md"
+        className="bg-slate-200 max-w-md p-10 rounded-md m-auto"
       >
         <label htmlFor="">web site</label>
         <input
