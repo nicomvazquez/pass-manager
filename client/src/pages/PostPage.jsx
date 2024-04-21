@@ -12,10 +12,12 @@ function PostPage() {
   }, []);
 
   return (
-    <div className="h-full">
-      <h1 className="text-4xl my-10 text-center">{posts.length === 0 ? "no passwords again" : "your passwords"}</h1>
+    <div className="h-full w-full">
+      <h1 className="text-4xl my-10 text-center">
+        {posts.length === 0 ? "no passwords again" : "your passwords"}
+      </h1>
 
-      <div className="flex flex-wrap gap-7 justify-evenly">
+      <div className="w-full flex flex-wrap justify-items-start gap-7">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}

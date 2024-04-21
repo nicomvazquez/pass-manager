@@ -4,8 +4,18 @@ import { Link } from "react-router-dom";
 import Card from "../components/PostCard.jsx";
 
 function HomePage() {
+
+  const post = {
+    title: "bevaevfaev",
+    password: "vaevaev",
+    url: "veavea",
+    date: "vaveav",
+    id: ""
+  }
+
   return (
     <div className="flex h-full w-full gap-5">
+      <Card post={post}></Card>
       <div className="max-w-4xl bg-slate-200 p-8 rounded-md h-full">
         <img src="foto-home.png" alt="" />
         <p className="mt-10 text-xl">
