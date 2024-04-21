@@ -9,34 +9,36 @@ function PostCard({ post }) {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-slate-800 max-w-sm w-full p-3 rounded-md">
-      <h1 className="text-3xl">{post.title}</h1>
-      <p className="my-4">password: {post.password}</p>
-      <div className="flex justify-between">
-        <a href={post.url}>
-          <button className="bg-green-600 px-3 py-2 rounded-md text-slate-950">
-            visitar
-          </button>
-        </a>
-        <div className="flex gap-3">
+    <div className="bg-slate-200 max-w-sm p-6 rounded-md text-black shadow-2xl">
+      <div className="flex justify-between ">
+        <h1 className="text-3xl font-medium">{post.title}</h1>
+        <div className="flex gap-3 text-white">
           <button
             onClick={() => {
               deletePost(post.id);
             }}
             className="bg-red-700 px-3 py-2 rounded-md"
           >
-            eliminar
+            X
           </button>
           <button
             onClick={() => {
               navigate(`/posts/update/${post.id}`);
             }}
-            className="bg-teal-600 px-3 py-2 rounded-md text-slate-950"
+            className="bg-teal-600 px-3 py-2 rounded-md"
           >
-            editar
+            /
           </button>
         </div>
       </div>
+      <p className="my-4 text-xl font-bold">
+        password: <span className="font-normal">{post.password}</span>
+      </p>
+      <a href={post.url}>
+        <button className="bg-green-600 px-3 py-2 rounded-md">
+          ir al sitio
+        </button>
+      </a>
     </div>
   );
 }

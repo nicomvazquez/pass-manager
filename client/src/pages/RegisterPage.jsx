@@ -21,19 +21,19 @@ function RegisterPage() {
   }, [isAutenticated]);
 
   return (
-    <div className="bg-slate-600 max-w-md p-10 rounded-md m-auto">
-      {registerErrors.map((message, i) => (
-        <div className="bg-red-500 p-2" key={i}>
-          {message.error}
-        </div>
-      ))}
-
+    <div className="h-full">
       <form
         onSubmit={handleSubmit(async (values) => {
           console.log(values);
           singup(values);
         })}
+        className="bg-slate-200 max-w-md p-10 rounded-md m-auto"
       >
+        {registerErrors.map((message, i) => (
+          <div className="bg-red-500 p-2" key={i}>
+            {message.error}
+          </div>
+        ))}
         <label htmlFor="" className="text-2xl">
           email
         </label>
@@ -45,7 +45,7 @@ function RegisterPage() {
               message: "this camp is required",
             },
           })}
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
         />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
@@ -60,7 +60,7 @@ function RegisterPage() {
               message: "this camp is required",
             },
           })}
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
         />
         {errors.username && (
           <p className="text-red-500">{errors.username.message}</p>
@@ -77,7 +77,7 @@ function RegisterPage() {
               message: "this camp is required",
             },
           })}
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
         />
         {errors.password && (
           <p className="text-red-500">{errors.password.message}</p>
@@ -101,13 +101,13 @@ function RegisterPage() {
               }
             },
           })}
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
         />
         {errors.comfirm && (
           <p className="text-red-500">{errors.comfirm.message}</p>
         )}
 
-        <button type="submit" className="bg-green-700 px-3 py-2 rounded-md">
+        <button type="submit" className="bg-cyan-400 px-3 py-2 rounded-md">
           submit
         </button>
         <p className="mt-7">

@@ -12,7 +12,7 @@ function PostPage() {
   }, []);
 
   return (
-    <div>
+    <div className="h-full">
       <h1 className="text-4xl my-10 text-center">{posts.length === 0 ? "no passwords again" : "your passwords"}</h1>
 
       <div className="flex flex-wrap gap-7 justify-evenly">

@@ -27,7 +27,7 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div>
+    <div className="h-full">
       <div className="bg-gray-700 max-w-md p-5 rounded-md m-auto">
         <h1 className="text-3xl mb-5">Password Generator</h1>
         <label htmlFor="length">Password Length:</label>

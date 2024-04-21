@@ -24,7 +24,6 @@ export const AuthProvider = ({ children }) => {
   // chequeo de inicio de sesion
   useEffect(() => {
     const checkLoguin = async () => {
-
       try {
         const res = await verifyTokenRequest();
         console.log(res)

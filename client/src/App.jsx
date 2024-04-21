@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import { PostProvider } from "./context/PostContext.jsx";
 
 import Navbar from "./components/Navbar.jsx";
+import Foother from './components/Foother.jsx'
 
 import RegisterPage from "./pages/RegisterPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
@@ -20,7 +21,7 @@ function App() {
     <AuthProvider>
       <PostProvider>
         <BrowserRouter>
-          <main className="container mx-auto px-10">
+          <main className="container mx-auto px-10 flex flex-col justify-between h-screen">
             <Navbar />
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/generator" element={<Generator />} />
               </Route>
             </Routes>
+            <Foother />
           </main>
         </BrowserRouter>
       </PostProvider>

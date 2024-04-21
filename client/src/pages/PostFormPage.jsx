@@ -31,7 +31,7 @@ function PostFormPage() {
   }, []);
 
   return (
-    <div className="bg-slate-600 max-w-md p-10 rounded-md">
+    <div className="h-full">
       <form
         onSubmit={handleSubmit(async (values) => {
           if (params.id) {
@@ -41,29 +41,30 @@ function PostFormPage() {
           }
           navigate("/posts");
         })}
+        className="bg-slate-200 max-w-md p-10 rounded-md"
       >
         <label htmlFor="">web site</label>
         <input
           type="text"
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
           {...register("title", { required: true })}
         />
 
         <label htmlFor="">password</label>
         <input
           type="text"
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
           {...register("password", { required: true })}
         />
 
         <label htmlFor="">url</label>
         <input
           type="text"
-          className="bg-zinc-500 w-full px-4 py-2 rounded-sm my-2"
+          className="bg-slate-300 border-b-2 border-cyan-400 w-full px-4 py-2 rounded-sm my-2"
           {...register("url", { required: true })}
         />
 
-        <input type="submit" />
+        <input type="submit" className="bg-cyan-400 px-3 py-2 rounded-md" />
       </form>
     </div>
   );
